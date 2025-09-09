@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Happy Birthday Mr.Perfectly fine</title>
+  <style>
+    body {
+      background-color: hotpink;
+      color: black;
+      font-family: 'Times New Roman', Times, serif;
+      display: list-item;
+      justify-content: center;
+      align-items: center;
+      height: 200vh;
+      overflow: hidden;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .flip-container {
+      display: flex;
+      flex-wrap: wrap;
+      font-size: 3rem;
+      gap: 6px;
+      justify-content: center;
+    }
+
+    .flip {
+      perspective: 11px;
+    }
+
+    .flip span {
+      display: inline-block;
+      transform-style: preserve-3d;
+      transition: transform 0.6s;
+      transform: rotateX(90deg);
+    }
+
+    .flip.show span {
+      transform: rotateX(0deg);
+    }
+  </style>
+</head>
+<body>
+  <div class="flip-container" id="flipText"></div>
+
+  <script>
+    const text ="       Happy Birthday! Glad to know you.               January comes for love <3 I'm already fighting to  urge to not text you, bro.... January 28, exactly theincrease in your age!                                                                                                                        I carry you in my heart through every silence, every distance... The owner of brown eyes, with a gaze that is so alluring & I'd spend all my patience on you. -Love, J.";
+    const container = document.getElementById("flipText"); 
+ 
+
+    [...text].forEach((char, index) => {
+      const flip = document.createElement("div");
+      flip.className = "flip";
+      const span = document.createElement("span");
+      span.textContent = char === " " ? "\u00A0" : char;
+      flip.appendChild(span);
+      container.appendChild(flip);
+
+      setTimeout(() => {
+        flip.classList.add("show");
+      }, index * 10); // bisa diubah kecepatannya
+    });
+  </script>
+</body>
+</html>
