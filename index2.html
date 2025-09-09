@@ -1,1 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta ="UTF-8">
+  <title>Merry .</title>
+  <style>charset
+    body {
+      background-color: #1a1a1a;
+      font-family: 'Georgia', serif;
+      color: white;
+      margin: 0;
+      padding: 40px;
+    }
+
+container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .box {
+      background-color:black;
+      padding: 40px;
+      text-align: center;
+      border-radius: 10px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .box:hover {
+      transform: scale(1.05);
+      background-color: rgb(54, 2, 2);
+    }
+
+    .box h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .box p {
+      font-size: 16px;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .box:hover p {
+      opacity: 1;
+    }
+
+    .Marry-Christmas { border-left: 5px solid crimson; }
+    .D { border-left: 5px solid green;}
+    .M { border-left: 5px solid rgb(107, 8, 28);}
+    .A { border-left: 5px solid rgb(7, 41, 7);}
+
+
+     </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="box Just-for-me">
+          <img src="santa.jpeg" alt="Just for me" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
+      <h2>Just for me</h2>
+      <p>"And my diary's full of your name on every page."</p>
+    </div>
+    <div class="box The-Beach">
+          <img src="tree.jpg" alt="Just for me" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
+<p>"If i told you that i loved you, tell me, what would you say."</p>
+    </div>
+<div class="box Kingston">
+          <img src="image.jpg" alt="Just for me" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
+      <h2>Kingston</h2>
+      <p>"The day that i met you, i started dreaming."</p>
+    </div>
+    <div class="box Brooklyn-Baby">
+          <img src="merry.jpeg" alt="Just for me" style="width:100%; border-radius: 10px; margin-bottom: 15px;">
+      <h2>Brooklyn Baby</h2>
+      <p>"Well my boyfriend's in a band, he plays guitar while i sing Lou Reed."</p>
+    </div>
 
